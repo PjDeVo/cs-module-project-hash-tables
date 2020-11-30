@@ -242,7 +242,7 @@ class HashTable:
                 if self.table[hash_index] != None:
                     self.table[hash_index].insert_at_head(curr_node)
                 else:
-                    linked_list = linked_list()
+                    linked_list = LinkedList()
                     linked_list.insert_at_head(curr_node)
                     self.table[hash_index] = linked_list
 
