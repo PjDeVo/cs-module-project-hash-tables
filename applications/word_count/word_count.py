@@ -1,5 +1,22 @@
 def word_count(s):
-    # Your code here
+    ignore = '":;,.-+=/\|[]{}()*^&'
+
+    words = s.split()
+    
+    wordCount = {}
+
+    for word in words:
+        word = word.strip(ignore).lower()
+        if not word:
+            break
+        if word in wordCount:
+            wordCount[word] +=1
+        else:
+            wordCount[word]= 1
+    return wordCount
+
+
+        
 
 
 
